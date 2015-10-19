@@ -21,23 +21,37 @@
             width: 445px;
             padding: 2px;
         }
-        .auto-style5 {
-            width: 4px;
-            padding: 4px;
+
+        .bordered, .outlined {
+          display: table;
+          margin: 1em;
         }
-        .auto-style6 {
-            width: inherit;
-            padding: 4px;
+
+        .bordered div, .outlined div {
+          display: table-cell;
+          width: 200px;
+          height: 200px;
         }
-        .auto-style7 {
-            width: inherit;
-            border: 1px solid #2E6DA4;
+
+        .bordered .highlight {
+          border: 10px solid orange;
+          background: transparent;
         }
-        .auto-style8 {
-            width: inherit;
+
+        .outlined .highlight {
+          outline: 10px solid red;
+          background: transparent;
         }
-        .auto-style9 {
-            height: inherit;
+
+        .offset {
+          /* if your browser supports this property, the 3rd example will have a smaller outline than the 2nd example */
+          outline-offset: -10px;
+        }
+
+        /* colors! */
+
+        .bordered div, .outlined div {
+          background: white;
         }
     </style>
 </head>
@@ -50,49 +64,78 @@
                 <h1>Cineplex - Administrator Login</h1>
 </div>
 
+    <div class="col-xs-12" style="height:2px;"></div>
 
-                <table class="auto-style7">
-                    <tr>
-                        <td class="auto-style8" rowspan="5"><img src="https://vehemenceforcinema.files.wordpress.com/2015/07/20150224045552cinema_neon_sign_059-c14-c.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="200"/></td>
-                        <td class="auto-style9"></td>
-                        <td class="auto-style9"></td>
-                    </tr>
-                    <tr>
-                        <td>Username:</td>
-                        <td> <asp:TextBox ID="UserName" runat="server" Width="188px" MaxLength="16" /></td>
-                    </tr>
-                    <tr>
-                        <td>Password:</td>
-                        <td>  <asp:TextBox ID="Passwords" runat="server" Width="188px" /></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td><asp:Literal ID="Literal1" runat="server"></asp:Literal></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td><asp:Button ID="Login" runat="server"  Text="Log In" OnClick="Login_Click" /></td>
-                    </tr>
-    </table>
+<div class="row">
+
+  <div class="col-xs-6 col-md-4"></div>
+
+  <div class="col-xs-6 col-md-4">
+
+    <div class="bordered">
+      <div></div>
+      <div class="highlight">
+
+          <table border="0">
+                            <!--<img src="https://vehemenceforcinema.files.wordpress.com/2015/07/20150224045552cinema_neon_sign_059-c14-c.jpg" class="img-rounded" alt="Cinque Terre" height="200"/> -->
+
+                        <tr>
+                            <td><div class="col-xs-12" style="height:20px;"></div></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Username:</td>
+                            <td> <asp:TextBox ID="UserName" runat="server" Width="188px" MaxLength="16" /></td>
+                        </tr>
+                        <tr>
+                            <td><div class="col-xs-12" style="height:10px;"></div></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td>  <asp:TextBox ID="Passwords" runat="server" Width="188px" TextMode="Password" /></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td hidden="hidden"><asp:Literal ID="Literal1" runat="server"></asp:Literal></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><asp:Button ID="Login" runat="server"  Text="Log In" OnClick="Login_Click" /></td>
+                            <td></td>
+                        </tr>
+                    </table>
+
+      </div>
+  <div></div>
+</div>
 
 
-                <br/>
-                <br/>
 
-    <div class="col-xs-12" style="height:75px;"></div>
+     
+
+  </div>
+
+  <div class="col-xs-6 col-md-4"></div>
+
+</div>
+
+    <div class="col-xs-12" style="height:14px;"></div>
 
             <div class="row">
 
                 <div class="col-md-4">
-                    <img src="http://www.clker.com/cliparts/c/b/6/c/13663719191300658152cinema.svg.hi.png" class="img-rounded" alt="Cinque Terre" width="250" height="250"/>
+                    <img src="http://www.clker.com/cliparts/c/b/6/c/13663719191300658152cinema.svg.hi.png" class="img-rounded" alt="Cinque Terre" width="100" height="200"/>
                 </div>
 
                 <div class="col-md-4">
-                    <img src="https://cdn0.iconfinder.com/data/icons/icostrike-characters/512/admin-512.png" class="img-rounded" alt="Cinque Terre" width="250" height="250"/>
+                    <img src="https://cdn0.iconfinder.com/data/icons/icostrike-characters/512/admin-512.png" class="img-rounded" alt="Cinque Terre" width="100" height="200"/>
                 </div>
 
                 <div class="col-md-4">
-                    <img src="http://simpleicon.com/wp-content/uploads/computer-2.png" class="img-rounded" alt="Cinque Terre" width="250" height="250"/>
+                    <img src="http://simpleicon.com/wp-content/uploads/computer-2.png" class="img-rounded" alt="Cinque Terre" width="100" height="200"/>
                 </div>
            </div>
 
